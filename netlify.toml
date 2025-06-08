@@ -1,0 +1,42 @@
+[build]
+  # Build command to run before deploying
+  command = "npm run build"
+  
+  # Directory to deploy (the built/compiled files)
+  publish = "dist"
+  
+  # Environment variables for build
+  [build.environment]
+    NODE_VERSION = "18"
+
+# Redirect rules for SPA (if needed in future)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+
+# Headers for better performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+# Cache static assets
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/styles/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
