@@ -2,17 +2,17 @@ const { src, dest, series, parallel } = require('gulp');
 const htmlmin = require('gulp-htmlmin');
 const cleanCSS = require('gulp-clean-css');
 const terser = require('gulp-terser');
-const del = require('del');
 
 // Clean dist directory
-function clean() {
-  return del(['dist']);
+async function clean() {
+  const { deleteAsync } = await import('del');
+  return deleteAsync(['dist']);
 }
 
 // Copy other files (e.g., images, fonts)
 function copyAssets() {
-  return src(['src/assets/**/*'])
-    .pipe(dest('dist/assets'));
+  return src(['src/images/**/*'])
+    .pipe(dest('dist/images'));
 }
 
 // Minify HTML
