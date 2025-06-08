@@ -11,7 +11,7 @@ async function clean() {
 
 // Copy other files (e.g., images, fonts)
 function copyAssets() {
-  return src(['src/images/**/*'])
+  return src(['src/images/**/*'], { encoding: false })
     .pipe(dest('dist/images'));
 }
 
