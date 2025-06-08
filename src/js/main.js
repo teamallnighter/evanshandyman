@@ -3,27 +3,27 @@
 // Configuration for random background images with SEO metadata
 const BACKGROUND_IMAGES = [
     {
-        url: '../images/backgrounds/hero1.jpg',
+        url: 'images/backgrounds/hero1.jpg',
         alt: 'Professional handyman working with tools on home renovation project',
         description: 'Skilled craftsman using professional tools for quality home repairs'
     },
     {
-        url: '../images/backgrounds/hero2.jpg',
+        url: 'images/backgrounds/hero2.jpg',
         alt: 'Modern home improvement and construction work in progress',
         description: 'Professional home renovation showcasing quality workmanship'
     },
     {
-        url: '../images/backgrounds/hero3.jpg',
+        url: 'images/backgrounds/hero3.jpg',
         alt: 'Handyman tools and equipment for professional home repairs',
         description: 'Collection of professional tools used for reliable home maintenance'
     },
     {
-        url: '../images/backgrounds/hero4.jpg',
+        url: 'images/backgrounds/hero4.jpg',
         alt: 'Expert carpenter working on custom home improvement project',
         description: 'Skilled carpenter demonstrating precision in home renovation work'
     },
     {
-        url: '../images/backgrounds/hero5.jpg',
+        url: 'images/backgrounds/hero5.jpg',
         alt: 'Professional handyman services for residential maintenance and repairs',
         description: 'Quality handyman services ensuring reliable home maintenance solutions'
     }
