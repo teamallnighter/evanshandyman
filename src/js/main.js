@@ -83,7 +83,16 @@ class HeroManager {
         if (!this.heroElement || !this.selectedImage) return;
 
         this.heroElement.style.backgroundImage = `url('${this.selectedImage.url}')`;
+        this.heroElement.style.backgroundSize = 'cover';
+        this.heroElement.style.backgroundPosition = 'center';
+        this.heroElement.style.backgroundRepeat = 'no-repeat';
+        this.heroElement.style.backgroundAttachment = 'fixed';
         this.heroElement.style.transition = 'none';
+        
+        // Force a repaint
+        this.heroElement.offsetHeight;
+        
+        console.log(`🖼️ Background image set: ${this.selectedImage.url}`);
     }
     
     setAboutBackground() {
