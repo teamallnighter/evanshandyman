@@ -36,7 +36,11 @@ function minifyJs() {
     .pipe(dest('dist'));
 }
 
-exports.default = series(
+// Define build task
+const build = series(
   clean,
   parallel(minifyHtml, minifyCss, minifyJs, copyAssets)
 );
+
+exports.build = build;
+exports.default = build;
